@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GitHub Actions 自动部署学习示例" />
+    <title>GitHub Actions 自动部署成功</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="card">
+        <div class="status-icon" aria-hidden="true">✓</div>
+        <p class="eyebrow">GITHUB ACTIONS × GITHUB PAGES</p>
+        <h1>自动部署已生效</h1>
+        <p class="lead">这个页面由 GitHub Actions 在云端构建，并自动发布到 GitHub Pages。</p>
+
+        <div class="info-grid">
+          <div>
+            <span>部署提交</span>
+            <strong id="commit">读取中…</strong>
+          </div>
+          <div>
+            <span>构建时间</span>
+            <strong id="built-at">读取中…</strong>
+          </div>
+          <div>
+            <span>Actions Run</span>
+            <strong id="run-id">读取中…</strong>
+          </div>
+        </div>
+
+        <button id="counter-button" type="button">点击测试：<span id="counter">0</span></button>
+        <p class="hint">修改任意文件并推送到 main，本页面会自动更新。</p>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

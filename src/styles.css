@@ -1,0 +1,129 @@
+﻿:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  background: #07111f;
+  color: #f9fbff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 180, 216, 0.25), transparent 34%),
+    radial-gradient(circle at 85% 78%, rgba(124, 58, 237, 0.28), transparent 36%),
+    #07111f;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.card {
+  width: min(760px, 100%);
+  padding: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 28px;
+  background: rgba(11, 26, 47, 0.82);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(16px);
+}
+
+.status-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #04210f;
+  font-size: 34px;
+  font-weight: 900;
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.35);
+}
+
+.eyebrow {
+  margin: 28px 0 10px;
+  color: #67e8f9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(36px, 7vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.lead {
+  max-width: 600px;
+  margin: 22px 0 32px;
+  color: #a9bad1;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.info-grid div {
+  min-width: 0;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.info-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: #8fa4bf;
+  font-size: 12px;
+}
+
+.info-grid strong {
+  display: block;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+button {
+  width: 100%;
+  padding: 16px 20px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: white;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+button:active { transform: translateY(0); }
+
+.hint {
+  margin: 18px 0 0;
+  color: #7f93ad;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .shell { padding: 16px; }
+  .card { padding: 30px 22px; border-radius: 22px; }
+  .info-grid { grid-template-columns: 1fr; }
+}
